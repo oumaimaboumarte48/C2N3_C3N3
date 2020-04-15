@@ -1,0 +1,22 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1"
+  },
+  "scripts": {
+    "compile-sass": "node-sass sass/fichier.scss  dist/css/style.comp.css -w",
+    "concat-css": "concat -o  dist/css/style.concat.css  dist/css/additional.css dist/css/style.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.concat.css -o  dist/css/style.prefix.css"
+  },
+  "keywords": [
+    "oumaima"
+  ],
+  "author": "",
+  "license": "ISC"
+}

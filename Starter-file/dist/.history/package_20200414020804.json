@@ -1,0 +1,19 @@
+{
+  "name": "corona-virus",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "scripts": {
+    "watch-sass": "node-sass sass/main.scss css/style.css --watch",
+    "compile-sass": "node-sass sass/main.scss css/style.comp.css -w"
+  },
+  "keywords": [
+    "oumaima"
+  ],
+  "author": "",
+  "license": "ISC"
+}

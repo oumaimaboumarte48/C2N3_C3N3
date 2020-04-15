@@ -1,0 +1,14 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "Covid19",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/style.comp.css -w"
+  },
+  "keywords": [
+    "oumaima"
+  ],
+  "author": "",
+  "license": "ISC"
+}

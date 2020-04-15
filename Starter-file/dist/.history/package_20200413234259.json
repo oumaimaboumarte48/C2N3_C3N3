@@ -1,0 +1,20 @@
+{
+  "name": "covid19",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "node-sass sass/main.scss css/style.css --watch",
+    "compile-sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat-css": "concat -o css/style.concat.css css/additional.css css/style.comp.css"
+  },
+  "keywords": [
+    "oumaima"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1"
+  }
+}

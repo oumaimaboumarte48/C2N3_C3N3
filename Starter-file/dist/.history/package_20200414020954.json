@@ -1,0 +1,23 @@
+{
+  "name": "corona-virus",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1"
+  },
+  "scripts": {
+    "watch-sass": "node-sass sass/main.scss css/style.css --watch",
+    "compile-sass": "node-sass sass/fichier.scss  dist/css/style.comp.css -w",
+    "concat-css": "concat -o css/style.concat.css css/additional.css css/style.comp.css",
+    "concat-css": "concat -o  dist/css/style.concat.css  dist/css/additional.css dist/css/style.comp.css"
+  },
+  "keywords": [
+    "oumaima"
+  ],
+  "author": "",
+  "license": "ISC"
+}

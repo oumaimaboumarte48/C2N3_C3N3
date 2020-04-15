@@ -1,0 +1,158 @@
+.quiz {
+    width: 80%;
+    margin: 1em auto;
+  
+    &__start {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      .quiz__title {
+        @include h2title($blue, center);
+        margin: 1em;
+      }
+  
+      .start__btn {
+        @include btn-start
+      }
+    }
+  
+    #form {
+      .form_question {
+        height: 10em;
+  
+        .question {
+          @include h3title($blue, left);
+        }
+      }
+  
+  
+      .form_answer {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+  
+        ////////// Radio Inputs /////////
+  
+        .radio-button {
+          position: relative;
+          margin: 1em;
+        }
+  
+        .checkbox {
+          display: block;
+        }
+  
+        .radio-button input {
+          position: absolute;
+          margin: 5px;
+          padding: 0;
+          visibility: hidden;
+        }
+  
+        .radio-button .label-visible {
+          margin-left: 2em;
+          margin-bottom: 0;
+        }
+  
+        .fake-radiobutton {
+          position: absolute;
+          display: block;
+          top: 7px;
+          left: 3px;
+          width: 20px;
+          height: 20px;
+          border: 3px solid $blue;
+          background-color: white;
+        }
+  
+        .fake-radiobutton:after {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 12px;
+          height: 12px;
+          background: $yellow;
+          transform: translateX(-50%) translateY(-50%);
+        }
+  
+        .fake-radiobutton {
+          border-radius: 50%;
+        }
+  
+        .fake-radiobutton:after {
+          border-radius: 50%;
+        }
+  
+        input[type="radio"]:checked + span .fake-radiobutton:after {
+          display: block;
+  
+        }
+      }
+  
+      .form_btns {
+        width: fit-content;
+        margin: 1em auto;
+        text-align: center;
+  
+        #form_back,
+        #form_next {
+          @include btn-start;
+          color: white;
+          font-weight: 600;
+          width: 15em;
+          cursor: pointer;
+        }
+  
+        #form_next.on, #form_back.on {
+          -webkit-animation: btnFade 0.6s 0.1s 1 linear alternate;
+          -moz-animation: btnFade 0.6s 0.1s 1 linear alternate;
+          -ms-animation: btnFade 0.6s 0.1s 1 linear alternate;
+          -o-animation: btnFade 0.6s 0.1s 1 linear alternate;
+          animation: btnFade 0.6s 0.1s 1 linear alternate;
+        }
+  
+        @keyframes btnFade {
+          0% {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+          10% {
+            transform: translateY(-100%);
+  
+          }
+          15% {
+            transform: translateY(0);
+          }
+          30% {
+            transform: translateY(-50%);
+  
+          }
+          40% {
+            transform: translateY(0%);
+  
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+  
+  
+    }
+  
+    .hide {
+      display: none;
+    }
+  }
+  
+  //noinspection CssInvalidMediaFeature
+  @media (max-width: "368px") {
+    * {
+      font-size: 16px;
+    }
+  }
